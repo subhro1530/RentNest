@@ -45,7 +45,26 @@ function Navbar() {
     // Replace with your logic to determine the state from coordinates
     const state = "Your Current State";
     return state;
-  };
+    };
+    
+    const [showLoginOptions, setShowLoginOptions] = useState(false);
+
+      const handleLoginHover = () => {
+        setShowLoginOptions(true);
+      };
+
+      const handleLoginLeave = () => {
+        setShowLoginOptions(false);
+      };
+
+      const handlePopupMouseEnter = () => {
+        setShowLoginOptions(true);
+      };
+
+      const handlePopupMouseLeave = () => {
+        setShowLoginOptions(false);
+      };
+
 
   return (
     <nav className="bg-indigo text-white p-4 flex justify-between items-center">
@@ -59,7 +78,7 @@ function Navbar() {
             <select
               value={selectedLocation}
               onChange={handleLocationChange}
-              className="btn-dropdown w-60 bg-indigo border border-gray-500 rounded-lg px-3 py-2 text-gray-100"
+              className="btn-dropdown w-40 text-l bg-indigo border border-gray-500 rounded-lg px-3 py-2 text-gray-100"
             >
               <option value="">Location</option>
               <option value="current">
@@ -76,20 +95,20 @@ function Navbar() {
           {/* Prime Membership Dropdown */}
           <div className="relative inline-block text-left">
             <div className="relative group">
-              <button className="btn btn-primary bg-gray-600 px-3 rounded-lg py-2 text-l mx-2 group-hover:bg-gray-700 group-hover:text-white">
+              <button className="btn btn-primary px-3 transition duration-300 ease-in-out  rounded-lg py-2 text-l mx-2 group-hover:bg-white group-hover:text-black">
                 Prime Membership
               </button>
-              <div className="hidden group-hover:block absolute left-0 mt-2 py-2 bg-white shadow-lg rounded-lg w-48">
+              <div className="hidden group-hover:block absolute left-0 mt-2 py-2 bg-indigo border-gray-700 text-white shadow-lg rounded-lg w-500">
                 <div className="p-2">
-                  <h3 className="text-gray-800 font-bold">Prime Benefits</h3>
+                  <h3 className="text-white center">Prime Benefits</h3>
                   <img
                     src="/images/prime-badge.png"
                     alt="Prime Badge"
-                    className="mt-2 w-16"
+                    className="mt-2 w-106"
                   />
                   <a
                     href="https://example.com/prime"
-                    className="block text-blue-600 mt-2 hover:underline"
+                    className="block transition duration-300 ease-in-out text-blue-600 mt-2 hover:text-white"
                   >
                     Learn More
                   </a>
@@ -101,7 +120,54 @@ function Navbar() {
       </div>
       <div className="flex items-center">
         {/* Login Dropdown */}
-        <button className="btn btn-primary bg-gray-600 px-3 rounded-lg py-2 text-l mx-2">
+        <div className="relative group">
+          {/* Login Dropdown */}
+          <button
+            className="btn btn-primary bg-gray-600 px-3 rounded-lg py-2 text-l mx-2 group-hover:bg-gray-700 group-hover:text-white"
+            onMouseEnter={handleLoginHover}
+            onMouseLeave={handleLoginLeave}
+          >
+            Login
+          </button>
+          {showLoginOptions && (
+            <div
+              className="absolute right-0 mt-2 bg-indigo text-white shadow-lg rounded-lg w-40 transition duration-300 ease-in-out"
+              onMouseEnter={handlePopupMouseEnter}
+              onMouseLeave={handlePopupMouseLeave}
+            >
+              <div className="p-2">
+                <p className="mb-2 ">Login as:</p>
+                <a
+                  href="#"
+                  className="block  hover:text-gray-200 transition duration-300 ease-in-out"
+                >
+                  User
+                </a>
+                <a
+                  href="#"
+                  className="block  hover:text-gray-200 transition duration-300 ease-in-out"
+                >
+                  Retailer
+                </a>
+                <a
+                  href="#"
+                  className="block  hover:text-gray-200 transition duration-300 ease-in-out"
+                >
+                  Administrator
+                </a>
+                <div className="border-t border-gray-300 mt-2 pt-2">
+                  <a
+                    href="#"
+                    className="block text-blue-600 hover:underline transition duration-300 ease-in-out"
+                  >
+                    Sign Up
+                  </a>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+        <button className="btn btn-primary text-grey bg-gray-600 px-3 hover:bg-white hover:text-black transition duration-300 ease-in-out rounded-lg py-2 text-l mx-2">
           Post Property
         </button>
       </div>
