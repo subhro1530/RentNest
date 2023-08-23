@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.4.2",
     "autoprefixer": "10.4.15",
     "next": "13.4.19",
     "opencage-api-client": "^1.0.2",
