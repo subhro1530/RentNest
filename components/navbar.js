@@ -122,13 +122,14 @@ function Navbar() {
         {/* Login Dropdown */}
         <div className="relative group">
           {/* Login Dropdown */}
-          <button
+          <Link href="/login">
+            <button
             className="btn btn-primary bg-gray-600 px-3 rounded-lg py-2 text-l mx-2 group-hover:bg-gray-700 group-hover:text-white"
-            onMouseEnter={handleLoginHover}
-            onMouseLeave={handleLoginLeave}
+        
           >
             Login
-          </button>
+          </button></Link>
+
           {showLoginOptions && (
             <div
               className="absolute right-0 mt-2 bg-indigo text-white shadow-lg rounded-lg w-40 transition duration-300 ease-in-out"
