@@ -14,6 +14,11 @@ import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import { Button, FormControlLabel, Radio, RadioGroup } from '@mui/material';
 import { useRouter } from 'next/navigation';
 import axios from 'axios';
+import ClipLoader from "react-spinners/ClipLoader";
+import Modal from '@mui/material/Modal';
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const LoginComponent = () => {
   const router = useRouter();
@@ -26,17 +31,17 @@ const LoginComponent = () => {
   const [loading, setLoading] = React.useState(false);
   const [showPassword, setShowPassword] = React.useState(false);
 
-
+    const handleClose=()=>{setLoading(false)}
     const onLogin = async () => {
         try {
             setLoading(true);
             const response = await axios.post("/api/users/login", user);
             console.log("Login success", response.data);
-            //toast.success("Login success");
+            toast.success("Login successful !");
             router.push("/home");
         } catch (error) {
             console.log("Login failed", error.message);
-            //toast.error(error.message);
+            toast.error("Login failed !");
         } finally{
         setLoading(false);
         }
@@ -110,7 +115,17 @@ const LoginComponent = () => {
           </div>
           <div className="new-user" style={{fontSize:"20px"}}>
               New user ?  <a href="/signup" style={{color:"blue",textDecoration:"none"}}>SignUp</a>
-          </div>
+      </div>
+      <ToastContainer />
+      <Modal
+        open={loading}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        {/* <ClipLoader color="white" /> */}
+        <p style={{color:"white"}}>Processing....</p> 
+      </Modal>
     </div>
   )
 }

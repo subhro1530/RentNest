@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Link from "next/link";
+import { Button } from "@mui/material";
 
-function Navbar() {
+function Navbar({topic}) {
   const [selectedLocation, setSelectedLocation] = useState(""); // State to store selected location
   const [currentState, setCurrentState] = useState(""); // State to store current state
 
@@ -118,19 +119,16 @@ function Navbar() {
           </div>
         </div>
       </div>
-      <div className="flex items-center">
+      <div className="flex items-center gap-5">
         {/* Login Dropdown */}
         <div className="relative group">
           {/* Login Dropdown */}
           <Link href="/login">
-            <button
-            className="btn btn-primary bg-gray-600 px-3 rounded-lg py-2 text-l mx-2 group-hover:bg-gray-700 group-hover:text-white"
-        
-          >
-            Login
-          </button></Link>
+            <Button variant="contained" color="success" >
+            {topic}
+          </Button></Link>
 
-          {showLoginOptions && (
+          {/* {showLoginOptions && (
             <div
               className="absolute right-0 mt-2 bg-indigo text-white shadow-lg rounded-lg w-40 transition duration-300 ease-in-out"
               onMouseEnter={handlePopupMouseEnter}
@@ -166,11 +164,11 @@ function Navbar() {
                 </div>
               </div>
             </div>
-          )}
+          )} */}
         </div>
-        <button className="btn btn-primary text-grey bg-gray-600 px-3 hover:bg-white hover:text-black transition duration-300 ease-in-out rounded-lg py-2 text-l mx-2">
+        <Button variant="contained" color="success">
           Post Property
-        </button>
+        </Button>
       </div>
     </nav>
   );
