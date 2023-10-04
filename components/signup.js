@@ -14,7 +14,12 @@ import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import { Button, FormControlLabel, Radio, RadioGroup } from '@mui/material';
 import emailjs from '@emailjs/browser'
 import { useRouter } from 'next/navigation';
+import ClipLoader from "react-spinners/ClipLoader";
+import Modal from '@mui/material/Modal';
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+  
 const SignupComponent = () => {
    
   const router = useRouter();
@@ -29,7 +34,8 @@ const SignupComponent = () => {
   })
   const [buttonDisabled, setButtonDisabled] = React.useState(false);
   const [loading, setLoading] = React.useState(false);
-
+ 
+  const handleClose=()=>{setLoading(false)}
 
   async function mail(token) {
       const mailresponse = await emailjs.send(process.env.NEXT_PUBLIC_YOUR_SERVICE_ID, process.env.NEXT_PUBLIC_YOUR_TEMPLATE_ID, {
@@ -53,13 +59,14 @@ const SignupComponent = () => {
           });
           const data = await response.json();
           await mail(data.token);
-          console.log("Signup success", data);
+        console.log("Signup success", data);
+        toast.success("Signup successful!")
           router.push("/login");
           
       } catch (error) {
           console.log("Signup failed", error.message);
           
-          //toast.error(error.message);
+          toast.error("Signup failed!");
       }finally {
           setLoading(false);
       }
@@ -170,6 +177,16 @@ const SignupComponent = () => {
       <div className="logged-user" style={{fontSize:"20px"}}>
         Already have an account ? <a href="/login" style={{color:"blue",textDecoration:"none"}}>Login</a>
       </div>
+      <ToastContainer />
+      <Modal
+        open={loading}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        {/* <ClipLoader color="white" /> */}
+        <p style={{color:"white"}}>Processing....</p> 
+      </Modal>
     </div>
   )
 }

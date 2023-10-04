@@ -2,3 +2,16 @@
 
 @tailwind components;
 @tailwind utilities;
+
+body{
+margin:0px!important;
+}
+
+.rs-drawer-top.rs-drawer-sm{
+    height:200px !important;
+}
+.rs-drawer-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
