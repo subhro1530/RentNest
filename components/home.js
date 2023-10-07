@@ -9,6 +9,7 @@ import Image from 'next/Image'
 import Hero from './Hero'
 import SearchComponent from './SearchComponent'
 import Footer from './footer'
+import LocationCards from './LocationCards'
 
 const HomeComponent = () => {
     const router = useRouter();
@@ -30,6 +31,9 @@ const HomeComponent = () => {
             <Hero />
             <div className="sm:mx-20 mx-12 my-2">
                 <SearchComponent />
+            </div>
+            <div classname="text-black">
+                <LocationCards />
             </div>
             <Footer />
         </div>
