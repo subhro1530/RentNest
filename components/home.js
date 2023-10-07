@@ -1,33 +1,39 @@
+'use client'
 import axios from 'axios'
 import { useRouter } from 'next/navigation'
 import React from 'react'
+import Navbar from './navbar'
+import SecondNavbar from './secondnavbar'
+import toast from 'react-hot-toast'
+import Image from 'next/Image'
+import Hero from './Hero'
+import SearchComponent from './SearchComponent'
+import Footer from './footer'
 
 const HomeComponent = () => {
-    const router = useRouter()
-    const [data, setData] = React.useState("nothing")
+    const router = useRouter();
+    const [data, setData] = React.useState("nothing");
+
     const logout = async () => {
         try {
-            await axios.get('/api/users/logout')
-            //toast.success('Logout successful')
-            router.push('/login')
+            await axios.get('/api/users/logout');
+            toast.success('Logout Successful');
+            router.push('/login');
         } catch (error) {
             console.log(error.message);
-            //toast.error(error.message)
         }
     }
-
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen py-2">
-            <h1>Home -yet to be made</h1>
-        <button
-        onClick={logout}
-        className="bg-blue-500 mt-4 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        >Logout</button>
-
-
-
+        <div className="w-full overflow-hidden min-h-screen">
+            <Navbar topic='login' />
+            <SecondNavbar />
+            <Hero />
+            <div className="sm:mx-20 mx-12 my-2">
+                <SearchComponent />
             </div>
+            <Footer />
+        </div>
     )
 }
 
-export default HomeComponent
+export default HomeComponent;
