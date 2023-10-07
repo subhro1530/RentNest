@@ -67,10 +67,11 @@ const LoginComponent = () => {
       style={{
         backgroundColor: "white",
         padding: "20px",
-        borderRadius: "5px",
+        borderRadius: "10px",
         gap: "8px",
         paddingTop: "0px",
         textAlign: "center",
+        width:"25%"
       }}>
       <p style={{
         color: "orange",
@@ -79,12 +80,12 @@ const LoginComponent = () => {
       }}>Welcome Back to RentNest</p>
           <div className="email">
           <TextField id="outlined-basic" label="Email" variant="outlined" sx={{
-                  width: "404px"
+                  width: "296px"
         }}
         onChange={(e) => setUser({...user, email: e.target.value})}/>
           </div>
           <div className="password">
-          <FormControl sx={{  width: '404px' }} variant="outlined">
+          <FormControl sx={{  width: '296px' }} variant="outlined">
           <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
           <OutlinedInput
             id="outlined-adornment-password"
@@ -109,7 +110,7 @@ const LoginComponent = () => {
           <div className="Login">
               <Button variant="contained" color="success"
                   sx={{
-                  width:"404px"
+                  width:"296px"
           }}
           onClick={onLogin}>Login !</Button>
           </div>
