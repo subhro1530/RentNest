@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { Button } from "@mui/material";
 
-function Navbar({topic}) {
+function Navbar({ topic }) {
   const [selectedLocation, setSelectedLocation] = useState(""); // State to store selected location
   const [currentState, setCurrentState] = useState(""); // State to store current state
 
@@ -46,29 +46,29 @@ function Navbar({topic}) {
     // Replace with your logic to determine the state from coordinates
     const state = "Your Current State";
     return state;
-    };
-    
-    const [showLoginOptions, setShowLoginOptions] = useState(false);
+  };
 
-      const handleLoginHover = () => {
-        setShowLoginOptions(true);
-      };
+  const [showLoginOptions, setShowLoginOptions] = useState(false);
 
-      const handleLoginLeave = () => {
-        setShowLoginOptions(false);
-      };
+  const handleLoginHover = () => {
+    setShowLoginOptions(true);
+  };
 
-      const handlePopupMouseEnter = () => {
-        setShowLoginOptions(true);
-      };
+  const handleLoginLeave = () => {
+    setShowLoginOptions(false);
+  };
 
-      const handlePopupMouseLeave = () => {
-        setShowLoginOptions(false);
-      };
+  const handlePopupMouseEnter = () => {
+    setShowLoginOptions(true);
+  };
+
+  const handlePopupMouseLeave = () => {
+    setShowLoginOptions(false);
+  };
 
 
   return (
-    <nav className="bg-indigo text-white p-4 flex justify-between items-center">
+    <nav className=" text-white p-4 flex justify-between items-center gap-3">
       <div className="flex items-center">
         <Link href="/">
           <img src="/images/full.png" alt="Logo" className="h-10 w-50 mr-2" />
@@ -96,7 +96,7 @@ function Navbar({topic}) {
           {/* Prime Membership Dropdown */}
           <div className="relative inline-block text-left">
             <div className="relative group">
-              <button className="btn btn-primary px-3 transition duration-300 ease-in-out  rounded-lg py-2 text-l mx-2 group-hover:bg-white group-hover:text-black">
+              <button className="btn btn-primary px-3 transition duration-300 ease-in-out  rounded-lg py-2 text-l mx-2 group-hover:bg-white text-black">
                 Prime Membership
               </button>
               <div className="hidden group-hover:block absolute left-0 mt-2 py-2 bg-indigo border-gray-700 text-white shadow-lg rounded-lg w-500">
@@ -125,8 +125,8 @@ function Navbar({topic}) {
           {/* Login Dropdown */}
           <Link href="/login">
             <Button variant="contained" color="success" >
-            {topic}
-          </Button></Link>
+              {topic}
+            </Button></Link>
 
           {/* {showLoginOptions && (
             <div
