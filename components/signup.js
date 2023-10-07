@@ -98,6 +98,7 @@ const SignupComponent = () => {
         gap: "8px",
         paddingTop: "0px",
         textAlign: "center",
+        width:"30%"
       }}>
       <p style={{
         color: "orange",
@@ -118,19 +119,19 @@ const SignupComponent = () => {
           </div>
           <div className="contact">
              <TextField id="outlined-basic" label="Contact Number" variant="outlined" sx={{
-                  width: "404px"
+                  width: "355px"
         }}
           onChange={(e) => setUser({ ...user, contact: e.target.value })}
         />
           </div>
           <div className="email">
           <TextField id="outlined-basic" label="Email" variant="outlined" sx={{
-                  width: "404px"
+                  width: "355px"
         }}
         onChange={(e) => setUser({...user, email: e.target.value})}/>
           </div>
           <div className="password">
-          <FormControl sx={{  width: '404px' }} variant="outlined">
+          <FormControl sx={{  width: '355px' }} variant="outlined">
           <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
           <OutlinedInput
             id="outlined-adornment-password"
@@ -168,7 +169,7 @@ const SignupComponent = () => {
           <div className="signup">
               <Button variant="contained" color="success"
                   sx={{
-                  width:"404px"
+                  width:"355px"
           }}
           disabled={buttonDisabled}
           onClick={onSignup}
