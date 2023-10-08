@@ -106,9 +106,9 @@ function LocationCards() {
                 <img
                   src={item.image}
                   alt="imgurl"
-                  className="w-[400px] h-[250px] rounded-[10px] opacity-50"
+                  className="w-[400px] h-[250px] rounded-[10px] opacity-60"
                 />
-                <h2 className="absolute font-bold text-[22px] leading-[32px] text-gradient bottom-3 left-2">
+                <h2 className="absolute font-bold text-[22px] leading-[32px] text-gradient bottom-2 left-2 text-center">
                   {item.locationName}
                 </h2>
               </div>
