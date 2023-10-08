@@ -6,19 +6,19 @@ function Hero() {
     <>
       <section
         id="home"
-        className={`flex md:flex-row flex-col ${styles.paddingY}`}>
+        className={`flex md:flex-row flex-col sm:py-10 py-2 xs:mt-2 mt-1`}>
         <div
           className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6`}>
           <div className="flex flex-row justify-between items-center w-full">
-            <h1 className="flex-1 font-poppins font-semibold sm:text-[52px] text-[32px] text-white sm:leading-[100px] leading-[75-px]">
-              House For
+            <h1 className="flex-1 font-poppins font-semibold sm:text-[52px] text-[45px] text-white sm:leading-[100px] leading-[75-px]">
+              Renting Made Easy,
               <br className="sm:block hidden" />{" "}
-              <span className="text-gradient">Rent </span>{" "}
+              <span className="text-gradient">Nesting Made Joyful </span>{" "}
             </h1>
           </div>
 
-          <h1 className=" font-poppins font-semibold sm:text-[52px] text-[32px] text-white sm:leading-[100px] leading-[75-px] w-full">
-            in Bangaluru.
+          <h1 className=" font-poppins font-semibold sm:text-[52px] text-[45px] text-white sm:leading-[100px] leading-[75-px] w-full">
+            in Bengaluru.
           </h1>
           <p
             className={`${styles.paragraph} sm:max-w-[420px] max-w-[470px] mt-5`}>

@@ -10,6 +10,7 @@ import Hero from './Hero'
 import SearchComponent from './SearchComponent'
 import Footer from './footer'
 import LocationCards from './LocationCards'
+import Features from './Features'
 
 const HomeComponent = () => {
     const router = useRouter();
@@ -32,9 +33,8 @@ const HomeComponent = () => {
             <div className="sm:mx-20 mx-12 my-2">
                 <SearchComponent />
             </div>
-            <div classname="text-black">
-                <LocationCards />
-            </div>
+            <LocationCards />
+            <Features />
             <Footer />
         </div>
     )
