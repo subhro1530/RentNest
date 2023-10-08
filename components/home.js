@@ -11,6 +11,8 @@ import SearchComponent from './SearchComponent'
 import Footer from './footer'
 import LocationCards from './LocationCards'
 import Features from './Features'
+import Feedback from './Feedback'
+import AboutComponenet from './AboutComponenet'
 
 const HomeComponent = () => {
     const router = useRouter();
@@ -35,6 +37,8 @@ const HomeComponent = () => {
             </div>
             <LocationCards />
             <Features />
+            <Feedback />
+            <AboutComponenet />
             <Footer />
         </div>
     )

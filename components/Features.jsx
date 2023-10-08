@@ -3,8 +3,8 @@ import styles, { layout } from "../app/styles";
 function Features() {
   return (
     <>
-      <section id="festures" className={layout.section}>
-        <div className={`ml-10 ${layout.sectionInfo}`}>
+      <section id="festures" className={`bg-gray-700 ${layout.section}`}>
+        <div className={`ml-10 mr-10 ${layout.sectionInfo}`}>
           <div className="absolute z-[0] w-[60%] h-[60%] -right-[50%] rounded-full blue__gradient" />
           <div className="w-full flex items-left text-left md:flex-row flex-row">
             <h1
