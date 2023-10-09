@@ -11,6 +11,8 @@ import SearchComponent from './SearchComponent'
 import Footer from './footer'
 import LocationCards from './LocationCards'
 import Features from './Features'
+import Feedback from './Feedback'
+import AboutComponenet from './AboutComponenet'
 
 const HomeComponent = () => {
     const router = useRouter();
@@ -26,8 +28,8 @@ const HomeComponent = () => {
         }
     }
     return (
-        <div className="w-full overflow-hidden min-h-screen">
-            <Navbar topic='login' />
+        <div className="bg-primary w-full overflow-hidden">
+            <Navbar topic='Logout' />
             <SecondNavbar />
             <Hero />
             <div className="sm:mx-20 mx-12 my-2">
@@ -35,6 +37,8 @@ const HomeComponent = () => {
             </div>
             <LocationCards />
             <Features />
+            <Feedback />
+            <AboutComponenet />
             <Footer />
         </div>
     )
