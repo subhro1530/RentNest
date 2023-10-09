@@ -63,6 +63,7 @@ const LoginComponent = () => {
     };
 
   return (
+    <div className='flex justify-center sm:py-40 sm:px-40'>
     <div className="flex flex-col "
       style={{
         backgroundColor: "white",
@@ -71,7 +72,7 @@ const LoginComponent = () => {
         gap: "8px",
         paddingTop: "0px",
         textAlign: "center",
-        width:"25%"
+        width:"30%"
       }}>
       <p style={{
         color: "orange",
@@ -127,6 +128,7 @@ const LoginComponent = () => {
         {/* <ClipLoader color="white" /> */}
         <p style={{color:"white"}}>Processing....</p> 
       </Modal>
+    </div>
     </div>
   )
 }

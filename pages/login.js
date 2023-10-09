@@ -10,11 +10,9 @@ import styles from './styles.module.css'
 const login = () => {
     return (
       <>
-        <div className={styles.hero}>
         <Navbar topic="Login"/>
                
         <LoginComponent/>
-        </div>
         <Footer/>
         </>      
   )
