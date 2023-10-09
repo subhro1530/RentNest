@@ -20,10 +20,7 @@ function Hero() {
           <h1 className=" font-poppins font-semibold sm:text-[55px] text-[45px] text-white sm:leading-[70px] leading-[75-px] w-full">
             in Bengaluru.
           </h1>
-          <p
-            className={`${styles.paragraph} sm:max-w-[420px] max-w-[470px] mt-5`}>
-            Discover your ideal home effortlessly with RentNest, where we take the hassle out of house-hunting, providing a variety of properties that perfectly suit your needs in Bangalore.
-          </p>
+
           <p
             className={`${styles.paragraph} sm:max-w-[420px] max-w-[470px] mt-5`}>
             Your Dream Home, Just a Click Away !
@@ -35,7 +32,7 @@ function Hero() {
           <img
             src="/images/house.png"
             alt="billing"
-            className="w-[90%] h-[80%] mt-2 relative z-[5]"
+            className="mt-2 relative object-contain  z-[5]"
           />
           <div className="absolute z-[0] w-[40%] h-[35%] top-0 pink__gradient" />
           <div className="absolute z-[1] w-[80%] h-[80%] rounded-full bottom-40 white__gradient" />

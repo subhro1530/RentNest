@@ -8,13 +8,10 @@ import styles from './styles.module.css'
 
 
 const login = () => {
-    return (
-      <>
-        <Navbar topic="Login"/>
-               
-        <LoginComponent/>
-        <Footer/>
-        </>      
+  return (
+    <div className="bg-primary min-h-screen">
+      <LoginComponent />
+    </div>
   )
 }
 
