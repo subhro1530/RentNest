@@ -30,7 +30,6 @@ const HomeComponent = () => {
     return (
         <div className="bg-primary w-full overflow-hidden">
             <Navbar topic='Logout' />
-            <SecondNavbar />
             <Hero />
             <div className="sm:mx-20 mx-12 my-2">
                 <SearchComponent />
