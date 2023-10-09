@@ -4,7 +4,7 @@ import "../app/globals.css";
 
 const home = () => {
   return (
-    <div className="w-full bg-primary overflow-hidden"><HomeComponent /></div>
+    <div className="bg-primary"><HomeComponent /></div>
 
   )
 }
