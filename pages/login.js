@@ -9,7 +9,9 @@ import styles from './styles.module.css'
 
 const login = () => {
   return (
-    <div className="bg-primary min-h-screen">
+    <div className="bg-primary min-h-screen items-center">
+      <div className=" z-[3] w-[80%] h-[60%] -right-[50%] rounded-full blue__gradient" />
+      <div className=" z-[3] w-[80%] h-[60%] -right-[50%] rounded-full pink__gradient" />
       <LoginComponent />
     </div>
   )
