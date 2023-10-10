@@ -1,9 +1,11 @@
 import HomeComponent from '../components/home'
 import React from 'react'
+import "../app/globals.css";
 
 const home = () => {
   return (
-          <HomeComponent/>
+    <div className="bg-primary"><HomeComponent /></div>
+
   )
 }
 
