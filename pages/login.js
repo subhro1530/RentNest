@@ -7,7 +7,7 @@ import React from 'react'
 import styles from './styles.module.css'
 
 
-const login = () => {
+const Login = () => {
   return (
     <div className="bg-primary min-h-screen">
       <LoginComponent />
@@ -15,4 +15,4 @@ const login = () => {
   )
 }
 
-export default login
+export default Login
