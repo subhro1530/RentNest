@@ -11,7 +11,7 @@ import FormControl from '@mui/material/FormControl';
 import TextField from '@mui/material/TextField';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
-import { Button, FormControlLabel, Radio, RadioGroup } from '@mui/material';
+import { Button, FormControlLabel, Radio, RadioGroup, useMediaQuery } from '@mui/material';
 import { useRouter } from 'next/navigation';
 import axios from 'axios';
 import ClipLoader from "react-spinners/ClipLoader";
@@ -21,6 +21,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const LoginComponent = () => {
+  const matches = useMediaQuery('(min-width:450px)');
   const router = useRouter();
     const [user, setUser] = React.useState({
         email: "",
@@ -72,7 +73,8 @@ const LoginComponent = () => {
         gap: "8px",
         paddingTop: "0px",
         textAlign: "center",
-        width:"30%"
+        width: matches ? "400px" : "85vw",
+        position: "relative"
       }}>
       <p style={{
         color: "orange",

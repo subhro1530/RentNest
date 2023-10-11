@@ -6,13 +6,15 @@ import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import SecondNavbar from "../components/secondnavbar";
 import styles from './styles.module.css'
+import { useMediaQuery } from "@mui/material";
 
 
-function Login() {
+function SignUp() {
+  const matches = useMediaQuery('(min-width:630px)');
   return (
     <>
-    <div className={styles.hero}>
-      <Navbar topic="SignUp"/>
+    <div className={styles.hero} style={{alignItems:matches?"unset":"center",padding:matches?"1rem":"0px"}}>
+      <Navbar topic="Login"/>
     
      <SignupComponent/>
      </div>
@@ -21,4 +23,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default SignUp;
