@@ -19,7 +19,7 @@ const HouseCard = (props) => {
 
   return (
     <div
-      className="housecard relative flex flex-col justify-center"
+      className="housecard relative flex flex-col "
       style={{
         width: "400px",
         backgroundColor: "white",
@@ -29,7 +29,7 @@ const HouseCard = (props) => {
       }}
     >
       <div className="image flex justify-center items-center" style={{ width: "100%" }}>
-        <img style={{ width: "100%" }} src={imageUrl} alt="" />
+        <img style={{ width: "100%",height:"287px" }} src={imageUrl} alt="" />
       </div>
       <div className="first-line flex justify-between">
         <div className="apartment flex gap-1">

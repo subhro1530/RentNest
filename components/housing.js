@@ -1,4 +1,4 @@
-import { Button, useMediaQuery } from '@mui/material'
+import { Button, SwipeableDrawer, useMediaQuery } from '@mui/material'
 import React from 'react'
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
@@ -54,9 +54,34 @@ const PrettoSlider = styled(Slider)({
 
 const HousingComponent = () => {
   const match = useMediaQuery('(min-width:750px)');
-  return (
-      <div className="housing flex gap-2" style={{backgroundColor:"black"}}>
-          <div className="sort flex flex-col" style={{width:"300px",backgroundColor:"white",display:match?"flex":"none"}}>
+
+  const [state, setState] = React.useState({
+    top: false,
+    left: false,
+    bottom: false,
+    right: false,
+  });
+
+  const toggleDrawer = (anchor, open) => (event) => {
+    if (
+      event &&
+      event.type === 'keydown' &&
+      (event.key === 'Tab' || event.key === 'Shift')
+    ) {
+      return;
+    }
+
+    setState({ ...state, [anchor]: open });
+  };
+
+  const list = (anchor) => (
+    <Box
+      sx={{ width:"300px",height:"100vh" }}
+      role="presentation"
+      onClick={toggleDrawer(anchor, false)}
+      onKeyDown={toggleDrawer(anchor, false)}
+    >
+                <div className="sort flex flex-col" style={{width:"300px",backgroundColor:"white",height:"100vh",overflowY:"scroll"}}>
               <div className="sorted-by flex justify-center items-center gap-4" style={{
                   borderBottom: "1px solid gray",
           padding: "16px",
@@ -218,6 +243,37 @@ const HousingComponent = () => {
 </FormControl>
               </div>
       </div>
+    </Box>
+  );
+  return (
+    <div className="housing flex gap-2 bg-primary" style=
+      {{
+      backgroundColor: "black",
+      backgroundImage: 'url("https://img.freepik.com/premium-photo/blue-black-gradient-luxury-soft-smooth-blurred-background-elegant-wallpaper-no-color-banding_741309-211.jpg")',
+      backgroundRepeat: "no-repeat",
+      backgroundSize:"cover"
+      }}>
+    <div>
+      {['filters'].map((anchor) => (
+        <React.Fragment key={anchor}>
+          <Button variant="contained" color="success"
+            sx={{
+              position: "fixed",
+              margin: "10px",
+              fontSize: "17px",
+              zIndex:"20"
+            }} onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
+          <SwipeableDrawer
+            anchor={anchor}
+            open={state[anchor]}
+            onClose={toggleDrawer(anchor, false)}
+            onOpen={toggleDrawer(anchor, true)}
+          >
+            {list(anchor)}
+          </SwipeableDrawer>
+        </React.Fragment>
+      ))}
+    </div>
       <div className="houses flex flex-wrap gap-1 gap-y-6  justify-around" style={{marginRight:"10px",marginTop:match?"12px":"24px"}}>
       {apartments.map((apartment, index) => (
         <HouseCard key={index} {...apartment} />
