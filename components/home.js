@@ -36,7 +36,7 @@ const HomeComponent = () => {
         <div className="bg-primary w-full overflow-hidden">
             <Navbar topic={cookie.get("token2")} logout={logout}/>
             <Hero />
-            <div className="sm:mx-20 mx-12 my-2">
+            <div className="mx-12 my-2">
                 <SearchComponent />
             </div>
             <LocationCards />

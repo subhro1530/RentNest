@@ -20,12 +20,12 @@ function Navbar({ topic,logout }) {
     <nav className={`text-white p-4 flex justify-between items-center ${!matches?"flex-col gap-3":""}`}>
       <div className="flex items-center">
         <Link href="/">
-          <img src="/images/full.png" alt="Logo" className="h-10 w-50 mr-2" />
+          <img src="/images/full.png" alt="Logo" className="w-40 object-contain mr-2 sm:ml-10 ml-3" />
         </Link>
       </div>
-      <div className="flex items-center gap-5">
+      <div className="flex items-center sm:gap-5 gap-2">
         {/* Login Dropdown */}
-        <div className="relative group">
+        <div className="relative group ml-2">
           {/* Login Dropdown */}
             <Button variant="contained" color="success" onClick={handleClick}>
               {data}
