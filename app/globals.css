@@ -168,3 +168,22 @@ body,html {
   background: rgba(255, 255, 255, 0.6);
   filter: blur(750px);
 }
+
+.navbar-items{
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.navbar-items:hover{
+  border:1px solid transparent;
+}
+
+
+
+.fixed-second-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: top .1s;
+  /* Add other styles as needed */
+}

@@ -23,15 +23,15 @@ function Navbar({ topic,logout }) {
           <img src="/images/full.png" alt="Logo" className="w-40 object-contain mr-2 sm:ml-10 ml-3" />
         </Link>
       </div>
-      <div className="flex items-center sm:gap-5 gap-2">
+      <div className="flex items-center sm:gap-5 gap-2 ">
         {/* Login Dropdown */}
         <div className="relative group ml-2">
           {/* Login Dropdown */}
-            <Button variant="contained" color="success" onClick={handleClick}>
+            <Button variant="contained" color="success" onClick={handleClick} className="navbar-items">
               {data}
             </Button>
         </div>
-        <Button variant="contained" color="success" >
+        <Button variant="contained" color="success" className="navbar-items">
           Post Property
         </Button>
       </div>

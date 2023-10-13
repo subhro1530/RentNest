@@ -28,7 +28,7 @@ function SearchComponent() {
     },
   ];
   return (
-    <div className="w-full overflow-hidden">
+    <div id="location" className="w-full overflow-hidden">
       <div
         className="p-3 rounded-lg items-center justify-center"
         style={{
