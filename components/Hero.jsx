@@ -24,9 +24,6 @@ function Hero() {
           <p className={`${styles.paragraph} w-full  mt-5`}>
             Unlock the Door to Your Perfect Home in Bangalore with RentNest!
           </p>
-          <div className="absolute z-[0] w-[10%] h-[15%] top-0  right-20 pink__gradient" />
-          <div className="absolute z-[1] w-[10%] h-[15%] right-20 rounded-full top-3 white__gradient" />
-          <div className="absolute z-[0] w-[25%] h-[25%] right-20 bottom-20 blue__gradient" />
           <div className="w-full mt-10">
             <a href="/#location">
               <button

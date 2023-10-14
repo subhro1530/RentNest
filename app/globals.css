@@ -136,6 +136,13 @@ body,html {
   background: transparent;
 }
 
+.house-card{
+  background: linear-gradient(144.39deg,
+      #ffffff -278.56%,
+      #6d6d6d -78.47%,
+      #11101d 91.61%);
+}
+
 .feedback-card:hover {
   background: var(--black-gradient);
 }
