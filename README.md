@@ -24,13 +24,13 @@ Before you begin, ensure you have met the following requirements:
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your-username/project-name.git
+    git clone https://github.com/subhro1530/RentNest.git
     ```
 
 2. Navigate to the project directory:
 
     ```bash
-    cd project-name
+    cd RentNest
     ```
 
 3. Install dependencies:
@@ -71,7 +71,7 @@ Before you begin, ensure you have met the following requirements:
 ### Communication
 
 - Join our [community Discord/Slack channel](#) for discussions.
-- Report bugs or suggest features through [GitHub Issues](https://github.com/your-username/project-name/issues).
+- Report bugs or suggest features through [GitHub Issues](https://github.com/subhro1530/RentNest/issues).
 
 ## Contributors
 
