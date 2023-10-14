@@ -19,9 +19,12 @@ import Modal from '@mui/material/Modal';
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
+import useMediaQuery from '@mui/material/useMediaQuery';
   
 const SignupComponent = () => {
-   
+  const matches = useMediaQuery('(min-width:450px)');
+
   const router = useRouter();
   const [showPassword, setShowPassword] = React.useState(false);
   const [user, setUser] = React.useState({
@@ -98,7 +101,8 @@ const SignupComponent = () => {
         gap: "8px",
         paddingTop: "0px",
         textAlign: "center",
-        width:"30%"
+        width: matches ? "400px" : "85vw",
+        position: "relative"
       }}>
       <p style={{
         color: "orange",
@@ -117,21 +121,21 @@ const SignupComponent = () => {
           onChange={(e) => setUser({ ...user, userLastName: e.target.value })}
         />
           </div>
-          <div className="contact">
+          <div className="contact relative">
              <TextField id="outlined-basic" label="Contact Number" variant="outlined" sx={{
-                  width: "355px"
+                  width: "100%"
         }}
           onChange={(e) => setUser({ ...user, contact: e.target.value })}
         />
           </div>
-          <div className="email">
+          <div className="email relative">
           <TextField id="outlined-basic" label="Email" variant="outlined" sx={{
-                  width: "355px"
+                  width: "100%"
         }}
         onChange={(e) => setUser({...user, email: e.target.value})}/>
           </div>
-          <div className="password">
-          <FormControl sx={{  width: '355px' }} variant="outlined">
+          <div className="password relative">
+          <FormControl sx={{  width: '100%' }} variant="outlined">
           <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
           <OutlinedInput
             id="outlined-adornment-password"
@@ -166,10 +170,10 @@ const SignupComponent = () => {
 
       </RadioGroup>
           </div>
-          <div className="signup">
+          <div className="signup relative">
               <Button variant="contained" color="success"
                   sx={{
-                  width:"355px"
+                  width:"100%"
           }}
           disabled={buttonDisabled}
           onClick={onSignup}

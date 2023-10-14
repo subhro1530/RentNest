@@ -62,7 +62,7 @@ const SearchNav = () => {
             color: "white", backgroundColor: "black", borderRadius: "30px", height: "50px", width: "50px"
           }} />
       </div> 
-      <div className="search2" style={{display:nonTab?"none":"block"}}>
+      <div className="search2" style={{display:nonTab?"none":"block"}}> 
       <IconButton onClick={() => handleOpen('top')}>
       <SearchIcon fontSize="large"
           sx={{

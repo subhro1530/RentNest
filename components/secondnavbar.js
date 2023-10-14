@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Link from "next/link";
 
+
+
 function SecondNavbar() {
   const [showBuyDropdown, setShowBuyDropdown] = useState(false);
   const [showRentDropdown, setShowRentDropdown] = useState(false);
@@ -40,146 +42,52 @@ function SecondNavbar() {
   };
 
   return (
-    <nav className="bg-blue-100 text-indigo p-1 flex justify-between items-center">
-      <div className="flex items-center">
-        {/* Buy Dropdown */}
+    <div className="relative hidden sm:flex isolate flex items-center gap-x-6 overflow-hidden bg-gray-50 px-6 py-2.5 sm:px-3.5 sm:before:flex-1">
+      <div
+        className="absolute left-[max(-7rem,calc(50%-52rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl"
+        aria-hidden="true"
+      >
         <div
-          className="relative group mr-6"
-          onMouseEnter={handleBuyHover}
-          onMouseLeave={handleBuyLeave}
-        >
-          <button className="btn btn-primary px-3 py-2 text-l">
-            Buy <i className="fas fa-chevron-down ml-1 w-2 text-indigo "></i>
-          </button>
-          {showBuyDropdown && (
-            <div className="absolute mt-2 bg-white shadow-lg rounded-lg w-96 transition duration-300 ease-in-out">
-              <div className="flex p-4 text-center space-x-4 border-b border-gray-500 pb-2">
-                {/* Parent element wrapping columns */}
-                <div className="w-1/3 ">
-                  {/* Popular Choices */}
-                  <h2 className="font-semibold mb-2 border-b border-gray-200 pb-1">
-                    Popular Choices
-                  </h2>
-                  <ul className="space-y-1">
-                    <li>
-                      <a href="#" className="py-4">Ready to move</a>
-                    </li>
-                    <li>
-                      <a href="#">Owner properties</a>
-                    </li>
-                    <li>
-                      <a href="#">Budget Homes</a>
-                    </li>
-                    <li>
-                      <a href="#">Newly Launched</a>
-                    </li>
-                  </ul>
-                </div>
-
-                {/* Property Types */}
-                <div className="w-1/3">
-                  <h2 className="font-semibold mb-2 border-b border-gray-200 pb-1">
-                    Property Types
-                  </h2>
-                  <ul className="space-y-1">
-                    {/* Replace with dynamic state */}
-                    <li>
-                      <a href="#">Flats in State</a>
-                    </li>
-                    <li>
-                      <a href="#">Houses for sale in State</a>
-                    </li>
-                    {/* ... Add more property types */}
-                  </ul>
-                </div>
-
-                {/* Budget */}
-                <div className="w-1/3">
-                  <h2 className="font-semibold mb-2 border-b border-gray-200 pb-1">
-                    Budget
-                  </h2>
-                  <ul className="space-y-1">
-                    <li>
-                      <a href="#">Below 10 Lacs</a>
-                    </li>
-                    <li>
-                      <a href="#">10-20 Lacs</a>
-                    </li>
-                    <li>
-                      <a href="#">20-30 Lacs</a>
-                    </li>
-                    {/* ... Add more budget ranges */}
-                  </ul>
-                </div>
-
-                {/* Explore */}
-                <div className="w-1/3">
-                  <h2 className="font-semibold mb-2 border-b border-gray-200 pb-1">
-                    Explore
-                  </h2>
-                  <ul className="space-y-1">
-                    <li>
-                      <a href="#">Explore State</a>
-                    </li>
-                    {/* ... Add more explore options */}
-                  </ul>
-                </div>
-              </div>
-            </div>
-          )}
-        </div>
-
-        {/* Rent Dropdown */}
-        <div
-          className="relative group mr-6"
-          onMouseEnter={handleRentHover}
-          onMouseLeave={handleRentLeave}
-        >
-          <button className="btn btn-primary px-3 py-2 text-l">
-            Rent <i className="fas fa-chevron-down ml-1 w-2 text-indigo "></i>
-          </button>
-          {showRentDropdown && (
-            <div className="absolute mt-2 bg-white shadow-lg rounded-lg w-36 transition duration-300 ease-in-out">
-              {/* Rent Dropdown Content */}
-            </div>
-          )}
-        </div>
-
-        {/* Sell Dropdown */}
-        <div
-          className="relative group mr-6"
-          onMouseEnter={handleSellHover}
-          onMouseLeave={handleSellLeave}
-        >
-          <button className="btn btn-primary px-3 py-2 text-l">
-            Sell <i className="fas fa-chevron-down ml-1 w-2 text-indigo "></i>
-          </button>
-          {showSellDropdown && (
-            <div className="absolute mt-2 bg-white shadow-lg rounded-lg w-36 transition duration-300 ease-in-out">
-              {/* Sell Dropdown Content */}
-            </div>
-          )}
-        </div>
+          className="aspect-[577/310] w-[36.0625rem] bg-gradient-to-r from-[#ff80b5] to-[#9089fc] opacity-30"
+          style={{
+            clipPath:
+              'polygon(74.8% 41.9%, 97.2% 73.2%, 100% 34.9%, 92.5% 0.4%, 87.5% 0%, 75% 28.6%, 58.5% 54.6%, 50.1% 56.8%, 46.9% 44%, 48.3% 17.4%, 24.7% 53.9%, 0% 27.9%, 11.9% 74.2%, 24.9% 54.1%, 68.6% 100%, 74.8% 41.9%)',
+          }}
+        />
       </div>
-
-      <div className="flex items-center">
-        {/* Help Dropdown */}
+      <div
+        className="absolute left-[max(45rem,calc(50%+8rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl"
+        aria-hidden="true"
+      >
         <div
-          className="relative group mr-6"
-          onMouseEnter={handleHelpHover}
-          onMouseLeave={handleHelpLeave}
-        >
-          <button className="btn btn-primary px-3 py-2 text-l">
-            Help <i className="fas fa-chevron-down ml-1 w-2 text-indigo "></i>
-          </button>
-          {showHelpDropdown && (
-            <div className="absolute mt-2 bg-white shadow-lg rounded-lg w-36 transition duration-300 ease-in-out">
-              {/* Help Dropdown Content */}
-            </div>
-          )}
-        </div>
+          className="aspect-[577/310] w-[36.0625rem] bg-gradient-to-r from-[#ff80b5] to-[#9089fc] opacity-30"
+          style={{
+            clipPath:
+              'polygon(74.8% 41.9%, 97.2% 73.2%, 100% 34.9%, 92.5% 0.4%, 87.5% 0%, 75% 28.6%, 58.5% 54.6%, 50.1% 56.8%, 46.9% 44%, 48.3% 17.4%, 24.7% 53.9%, 0% 27.9%, 11.9% 74.2%, 24.9% 54.1%, 68.6% 100%, 74.8% 41.9%)',
+          }}
+        />
       </div>
-    </nav>
+      <div className="flex flex-wrap items-center gap-x-4 gap-y-2 " >
+        <p className="text-sm leading-6 text-gray-900">
+          <strong className="font-semibold">Exclusively for You</strong>
+          <svg viewBox="0 0 2 2" className="mx-2 inline h-0.5 w-0.5 fill-current" aria-hidden="true">
+            <circle cx={1} cy={1} r={1} />
+          </svg>
+          Experience Effortless House-Hunting with Our Handpicked Selection of Homes
+        </p>
+        <a
+          href="#"
+          className="flex-none rounded-full bg-gray-900 px-3.5 py-1 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
+        >
+          Explore now <span aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+      <div className="flex flex-1 justify-end">
+        <button type="button" className="-m-3 p-3 focus-visible:outline-offset-[-4px]">
+          <span className="sr-only">Dismiss</span>
+        </button>
+      </div>
+    </div>
   );
 }
 
