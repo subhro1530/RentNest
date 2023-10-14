@@ -24,19 +24,20 @@ function Hero() {
           <p className={`${styles.paragraph} w-full  mt-5`}>
             Unlock the Door to Your Perfect Home in Bangalore with RentNest!
           </p>
-
-          <a href="/#location">
-            <button
-              type="button"
-              className="text-white  bg-gray-800 hover:bg-gray-900 focus:outline-none  focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-2xl px-5 py-2  dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">
-              <p>
-                <span>
-                  Explore Now{" "}
-                  <DoubleArrowIcon className="text-4xl items-center" />
-                </span>
-              </p>
-            </button>
-          </a>
+          <div className="w-full mt-10">
+            <a href="/#location">
+              <button
+                type="button"
+                className="text-white  bg-gray-800 hover:bg-gray-900 focus:outline-none  focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-2xl px-5 py-2  dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">
+                <p>
+                  <span>
+                    Explore Now{" "}
+                    <DoubleArrowIcon className="text-4xl items-center" />
+                  </span>
+                </p>
+              </button>
+            </a>
+          </div>
         </div>
 
         {/* <div
