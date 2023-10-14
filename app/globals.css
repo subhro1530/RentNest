@@ -136,6 +136,13 @@ body,html {
   background: transparent;
 }
 
+.house-card{
+  background: linear-gradient(144.39deg,
+      #ffffff -278.56%,
+      #6d6d6d -78.47%,
+      #11101d 91.61%);
+}
+
 .feedback-card:hover {
   background: var(--black-gradient);
 }
@@ -167,4 +174,23 @@ body,html {
 .white__gradient {
   background: rgba(255, 255, 255, 0.6);
   filter: blur(750px);
+}
+
+.navbar-items{
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.navbar-items:hover{
+  border:1px solid transparent;
+}
+
+
+
+.fixed-second-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: top .1s;
+  /* Add other styles as needed */
 }
