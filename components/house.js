@@ -25,13 +25,14 @@ const OneHouseComponent = () => {
   const [open, setOpen] = React.useState(false);
   const [backdrop, setBackdrop] = React.useState('static');
   const matches = useMediaQuery('(min-width:1060px)');
+  const matches2 = useMediaQuery('(min-width:600px)');
 
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
   return (
-      <div className="one-house flex w-full justify-evenly p-6">
+      <div className="one-house flex w-full justify-evenly p-6" style={{width:matches2?"100%":"100vh"}}>
           <div className="left flex flex-col gap-3" style={{width:"650px"}}>
               <div className="top flex flex-col gap-3  rounded-lg" style={{ width: "650px",padding:"10px",border:"1px solid black",padding:"20px" }}>
                   <div className="first-line flex justify-between items-center">
@@ -474,7 +475,7 @@ const OneHouseComponent = () => {
           </div>
         </div>
    </div>
-      <div className="book-small-tab flex fixed right-6" style={{display:matches?"none":"flex"}}>
+      <div className="book-small-tab flex fixed  top-1" style={{display:matches?"none":"flex"}}>
       <ButtonToolbar>
           <Button variant="contained" color="success" onClick={() => setOpen(true)}
             sx={{
@@ -485,7 +486,7 @@ const OneHouseComponent = () => {
       <Drawer backdrop={backdrop} open={open} onClose={() => setOpen(false)}>
 
         <Drawer.Body>
-        <div className="right flex flex-col gap-5" style={{ width: "24vw",minWidth: "300px",marginTop:"100%"}}>
+        <div className="right flex flex-col gap-5" style={{ width: "24vw",minWidth: "300px",marginTop:matches2?"100%":"0px"}}>
       <div className="right-top flex flex-col" >
         <div className="book-now flex justify-center items-center p-2 rounded-t-xl" style={{backgroundColor:"green",color:"white",fontSize:"16px"}}>
           BOOK NOW TO GET EXCLUSIVE DEALS
