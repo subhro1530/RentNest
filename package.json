@@ -26,6 +26,7 @@
     "bootstrap": "^5.3.2",
     "dayjs": "^1.11.10",
     "dotenv": "^16.3.1",
+    "framer-motion": "^10.16.4",
     "fs": "^0.0.1-security",
     "js-cookie": "^3.0.5",
     "jsonwebtoken": "^9.0.2",
