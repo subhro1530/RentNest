@@ -9,9 +9,11 @@ const prop = () => {
       <div className={styles.body}>
         <div className={styles.block}>
           <ul className={styles.listItems}>
-            <a href="">Property</a>
-            <a href="">Basic Info</a>
-            <a className={styles.on} href="/property/prop/address">Address and Map location</a>
+            <a href="/property/prop/property">Property</a>
+            <a href="/property/prop/basicinfo">Basic Info</a>
+            <a className={styles.on} href="/property/prop/address">
+              Address and Map location
+            </a>
             <a href="">Property Description</a>
             <a href="">Photos and Videos</a>
             <a href="">Pricing</a>

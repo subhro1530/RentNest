@@ -5,6 +5,7 @@
     height: 100vh;
     overflow-x: hidden;
     overflow-y: scroll;
+    width: 100vw;
 }
 
 .body{
@@ -125,4 +126,114 @@
     padding: 5px;
     color: white;
     width: 100%;
+}
+
+
+
+.body2{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
+    width: 60%;
+    margin: 5% 15%;
+    padding: 20px 5%;
+    background-color: rgb(19, 19, 19);
+    border-radius: 20px;
+    font-size: 16px;
+}
+.body2 select{
+    padding: 10px 20px;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 2px solid grey;
+    color: white;
+    background-color: #00040f;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    outline: none;
+    font-size: 16px;
+}
+.body2 p small{
+    color: red;
+}
+.body2 textarea{
+    padding: 10px 20px;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 2px solid grey;
+    color: white;
+    background-color: #00040f;
+    margin-top: -10px;
+    /* margin-bottom: 20px; */
+    outline: none;
+    font-size: 16px;
+}
+.body2 ul{
+    font-size: 14px;
+    margin-bottom: 40px;
+}
+.body2 .savebtn{
+    border: none;
+    background-color: rgb(8, 202, 255);
+    padding: 10px 20px;
+    border-radius: 5px;
+    color:#00040f;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+    text-decoration: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.body2 .savebtn:hover{
+    background-color: #0044ff;
+}
+
+.block4{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
+    margin-left: 20px;
+}
+.block4 .top{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.block4 .top .smallBlock{
+    width: 400px;
+    padding: 10px 10px ;
+}
+.smallBlock select{
+    border: 2px solid grey;
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #00040f;
+    border-radius: 10px;
+    margin-top: -10px;
+}
+
+.block4 h2{
+    border-bottom: 1px solid grey;
+    font-size: 30px;
+    font-weight: 200;
+}
+
+.bottom{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.checkblock{
+    width: 300px;
+    padding: 10px;
 }
